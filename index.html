@@ -96,13 +96,13 @@
               document.getElementById("receiptMessage").textContent = `✅ Tickets generated and sent to ${email}! Check your email for the detailed receipt.`;
             } else {
               const errorMsg = data.message || data.status || "Unknown error";
-              document.getElementById("receiptMessage").textContent = `❌ Error: ${errorMsg}`;
+              document.getElementById("receiptMessage").textContent = `Error: ${errorMsg}`;
               console.error("Backend error:", data);
             }
           })
           .catch(err => {
             console.error("Fetch error:", err);
-            document.getElementById("receiptMessage").textContent = "❌ An error occurred. Please try again.";
+            document.getElementById("receiptMessage").textContent = "An error occurred. Please try again.";
           });
         },
         onClose: function() {
@@ -114,5 +114,6 @@
   </script>
 </body>
 </html>
+
 
 
